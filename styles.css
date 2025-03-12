@@ -246,13 +246,13 @@ header h3 {
   display: flex;
   align-items: center;
   justify-content: center;
+}
 
-  h2.italic {
-    color: #f1ebe5;
-    text-align: center;
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
+.buffet-header h2.italic {
+  color: #f1ebe5;
+  text-align: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 /* lunch buffet flex container */
@@ -272,6 +272,7 @@ header h3 {
 .buffet-container {
   height: auto;
   width: clamp(300px, 100%, 1000px);
+  overflow: hidden;
 }
 
 .buffet-info {
@@ -322,6 +323,7 @@ header h3 {
   margin-bottom: 5rem;
   position: relative;
   cursor: pointer;
+  overflow: hidden;
 }
 
 .read-more h4 {
@@ -343,7 +345,46 @@ header h3 {
   width: clamp(150px, 100%, 361px);
   margin-left: 2rem;
   margin-right: 2rem;
-  align-self: center;
+  margin-top: 5rem;
+  align-self: flex-start;
+}
+
+/* ------------------------------------------------------------*/
+/* ---- Story section ---- */
+
+#story-section {
+  background-image: url(./images/story.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 794px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.our-story {
+  width: 902px;
+  height: auto;
+  border-radius: 20px;
+  background-color: #f1ebe5;
+  text-align: center;
+  margin-top: 5.75rem;
+  margin-bottom: 5.75rem;
+}
+
+.our-story h2 {
+  margin-bottom: 3rem;
+  margin-top: 3.75rem;
+}
+
+.our-story h4 {
+  margin-bottom: 2rem;
+}
+
+.our-story p {
+  margin-bottom: 3.75rem;
+  padding-left: 5rem;
+  padding-right: 3.75rem;
 }
 
 /* ------------------------------------------------------------*/
