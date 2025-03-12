@@ -1,0 +1,78 @@
+/* text setting */
+
+h1 {
+  font-family: "libre Baskerville";
+  font-size: 96px;
+  line-height: 100%;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -3%;
+}
+
+h2 {
+  font-family: "Manrope";
+  font-size: 64px;
+  line-height: 100%;
+  font-weight: 400;
+  letter-spacing: -3%;
+  color: #5e655c;
+}
+
+h2.italic {
+  font-family: "libre Baskerville";
+  font-style: italic;
+  color: #5e655c;
+}
+
+h2.light {
+  color: #f1ebe5;
+}
+
+h3 {
+  font-family: "manrope";
+  font-size: 30px;
+  line-height: 100%;
+  font-weight: 400;
+  letter-spacing: -3%;
+}
+
+h3.italic {
+  font-family: "libre Baskerville";
+  font-style: italic;
+  font-size: 36px;
+  color: #5e655c;
+}
+
+h4 {
+  font-family: "manrope";
+  font-size: 24px;
+  line-height: 100%;
+  font-weight: 400;
+  letter-spacing: -3%;
+  color: #5e655c;
+}
+
+h4.italic {
+  font-family: "libre Baskerville";
+  font-style: italic;
+  font-size: 24px;
+  line-height: 100%;
+  font-weight: 400;
+  letter-spacing: -3%;
+  color: #5e655c;
+}
+
+p {
+  font-family: "manrope";
+  font-size: 18px;
+  line-height: 100%;
+  font-weight: 400;
+  letter-spacing: -3%;
+  color: #5e655c;
+}
+
+p.italic {
+  font-family: "libre Baskerville";
+  font-style: italic;
+  color: #5e655c;
+}

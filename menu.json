@@ -1,0 +1,125 @@
+{
+  "starters": [
+    {
+      "name": "Crispy Miso Eggplant",
+      "price": "100",
+      "description": "Glazed with sweet miso, sesame, and scallions.",
+      "allergens": "(Contains: Soy, Sesame)"
+    },
+    {
+      "name": "Charred Edamame",
+      "price": "100",
+      "description": "Tossed in citrus chili salt & fermented black garlic.",
+      "allergens": "(Allergen-Free)"
+    },
+    {
+      "name": "Mushroom & Truffle Dumplings",
+      "price": "100",
+      "description": "Steamed with black truffle oil & ginger soy.",
+      "allergens": "(Contains: Gluten, Soy)"
+    }
+  ],
+  "baos": [
+    {
+      "name": "Smoky Hoisin Mushroom<",
+      "price": "100",
+      "description": "Oyster mushrooms, pickled cucumber, sriracha mayo, fresh herbs.",
+      "allergens": "(Contains: Gluten, Soy, Sesame)"
+    },
+    {
+      "name": "Korean BBQ Jackfruit",
+      "price": "100",
+      "description": " Kimchi slaw, toasted sesame, spicy gochujang glaze.",
+      "allergens": "(Contains: Gluten, Soy, Sesame)"
+    },
+    {
+      "name": "Crispy Tofu & Peanuts",
+      "price": "100",
+      "description": "Five-spice tofu, crushed peanuts, chili lime aioli.",
+      "allergens": "(Contains: Gluten, Soy, Peanuts)"
+    }
+  ],
+
+  "bahn_mi": [
+    {
+      "name": "Classic Lemongrass Tofu",
+      "price": "100",
+      "description": "Pickled daikon & carrots, fresh coriander, chili mayo.",
+      "allergens": "(Contains: Gluten, Soy)"
+    },
+    {
+      "name": "BBQ Pulled Jackfruit",
+      "price": "100",
+      "description": "Smoked jackfruit, crisp cucumber, hoisin glaze, jalapeños.",
+      "allergens": " (Contains: Gluten, Soy, Sesame)"
+    },
+    {
+      "name": "Grilled King Oyster Mushroom<",
+      "price": "100",
+      "description": "Sesame aioli, crispy shallots, Vietnamese herbs. ",
+      "allergens": "(Contains: Gluten, Sesame)"
+    }
+  ],
+
+  "bowls": [
+    {
+      "name": "Golden Buddha Bowl",
+      "price": "100",
+      "description": "Turmeric-roasted cauliflower, quinoa, kale, tahini dressing.",
+      "allergens": "(Contains: Sesame)"
+    },
+    {
+      "name": "Spicy Kimchi Rice Bowl",
+      "price": "100",
+      "description": "Kimchi, crispy tofu, sesame greens, gochujang sauce.",
+      "allergens": "(Contains: Soy, Sesame)"
+    },
+    {
+      "name": "Miso Ginger Noodle Bowl",
+      "price": "100",
+      "description": "Rice noodles, edamame, bok choy, shiitake mushrooms, ginger-miso dressing.",
+      "allergens": "(Contains: Soy, Sesame)"
+    }
+  ],
+
+  "desserts": [
+    {
+      "name": "Black Sesame & Miso Cheesecake",
+      "price": "100",
+      "description": "Creamy cashew-based cheesecake with black sesame swirl.",
+      "allergens": "(Contains: Nuts(Cashews, Almonds), Soy, Sesame)"
+    },
+    {
+      "name": "Matcha & Coconut Panna Cotta",
+      "price": "100",
+      "description": "Silky coconut cream infused with matcha, topped with yuzu zest.",
+      "allergens": "(Allergen-Free)"
+    },
+    {
+      "name": "Chocolate & Tahini Tart",
+      "price": "100",
+      "description": "Dark chocolate ganache, toasted tahini crust, sea salt.",
+      "allergens": "(Allergen-Free)"
+    }
+  ],
+  "drinks": [
+    {
+      "name": "House Kombucha",
+      "price": "100",
+      "description": "Rotating seasonal flavors.",
+      "allergens": "(Allergen-Free)"
+    },
+    {
+      "name": "Matcha & Yuzu Spritz",
+      "price": "100",
+      "description": "Sparkling yuzu, matcha infusion, fresh mint.",
+      "allergens": "(Allergen-Free)"
+    },
+    {
+      "name": "Charcoal Lemonade",
+      "price": "100",
+      "description": "Activated charcoal, lemon, agave, and ginger.",
+      "allergens": "(Allergen-Free)"
+    }
+  ]
+}
