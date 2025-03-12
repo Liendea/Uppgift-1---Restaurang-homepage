@@ -4,14 +4,6 @@
   box-sizing: border-box;
 }
 
-/* header */
-header {
-  background-image: url(./images/header.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 900px;
-}
-
 /* Navigation links & button */
 nav {
   font-family: "manrope";
@@ -19,18 +11,42 @@ nav {
   flex-direction: row;
   justify-content: flex-end;
   padding: 2rem;
+  align-items: center;
+}
+
+.logo img {
+  display: block;
 }
 
 nav div:first-child {
   margin-right: auto;
 }
 
-nav a {
+.nav-links a {
   text-decoration: none;
   color: #dddfd0;
-  font-size: 27px;
+  font-size: 24px;
   margin-right: 5rem;
   font-weight: 500;
+}
+
+@media (max-width: 1250px) {
+  .nav-links a {
+    margin-right: 3rem;
+  }
+}
+
+@media (max-width: 1100px) {
+  .nav-links a {
+    margin-right: 2rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .nav-links,
+  #nav-button {
+    display: none;
+  }
 }
 
 nav a:hover {
@@ -38,27 +54,70 @@ nav a:hover {
   text-underline-offset: 10px;
 }
 
+/* hamburger navigation menu */
+
+.hamburger-nav {
+  display: none;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+  .hamburger-nav {
+    display: block;
+  }
+}
+
+.line-1,
+.line-2,
+.line-3 {
+  height: 4px;
+  background-color: white;
+  width: 40px;
+}
+
+.line-1 {
+  transform: translateY(10px);
+}
+.line-2 {
+  transform: translateY(20px);
+}
+.line-3 {
+  transform: translateY(30px);
+}
 /* header */
+header {
+  background-image: url(./images/header.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: auto;
+}
+
 .header-text {
   color: #dddfd0;
   margin-top: 20rem;
   margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 header h1 {
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
 header h3 {
-  margin-bottom: 3rem;
+  margin-bottom: 2.9rem;
+  width: clamp(60%, 500px, 100%);
 }
 
 .header-buttons {
   margin-left: 2rem;
+  padding-bottom: 4rem;
 }
 
+/* ------------------------------------------------------------*/
 /* ---- Section - Philosophy ---- */
-#philosophy {
+#philosophy-section {
   background-color: #dddfd0;
   height: auto;
   padding: 10rem 2rem 10rem 2rem;
@@ -70,7 +129,7 @@ header h3 {
 }
 
 .headline h4 {
-  width: clamp(437px, 60%, 900px);
+  width: clamp(350px, 60%, 900px);
   margin-right: auto;
   margin-left: auto;
   text-align: center;
@@ -97,13 +156,13 @@ header h3 {
   padding: 3rem;
 }
 
+/* ------------------------------------------------------------*/
 /* ---- Section - á la carte ---- */
-#menu {
+#menu-section {
   background-color: #f1ebe5;
   height: auto;
 }
-
-#menu h2 {
+#menu-section h2 {
   text-align: center;
   padding-top: 10rem;
   padding-bottom: 2rem;
@@ -114,7 +173,9 @@ header h3 {
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
-  padding-bottom: 10rem;
+  padding-bottom: 8rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 .menu-container {
@@ -122,6 +183,13 @@ header h3 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-bottom: 10rem;
+  width: 100%;
+}
+
+.menu-container hr {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .menu-container h3 {
@@ -129,32 +197,48 @@ header h3 {
   text-align: center;
 }
 
-.starters,
-.baos,
-.bahn-mi,
-.sig-bowls,
-.desserts,
-.drinks {
+.menu-container .starters,
+.menu-container .baos,
+.menu-container .bahn-mi,
+.menu-container .sig-bowls,
+.menu-container .desserts,
+.menu-container .drinks {
   width: 50%;
   margin-bottom: 3rem;
 }
 
-.menu-item {
-  /* Skapas via JSON & JS */
-  margin-bottom: 1rem;
+@media (max-width: 1000px) {
+  .menu-container .starters,
+  .menu-container .baos,
+  .menu-container .bahn-mi,
+  .menu-container .sig-bowls,
+  .menu-container .desserts,
+  .menu-container .drinks {
+    width: 90%;
+    margin-bottom: 3rem;
+  }
 }
-.dish {
-  /* Skapas via JSON & JS */
+
+.menu-container .menu-item {
+  margin-bottom: 2rem;
+}
+
+.menu-container .dish {
   display: flex;
   justify-content: space-between;
 }
 
+/* ------------------------------------------------------------*/
 /* --- Buffet section --- */
-.buffet {
-  height: auto;
+
+.buffet-section {
+  background-color: #cec4bc;
+  padding-bottom: 5rem;
+  width: 100%;
 }
 
-.buffet-intro {
+/* Buffet header */
+.buffet-header {
   background-image: url(./images/buffet.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -162,10 +246,32 @@ header h3 {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  h2.italic {
+    color: #f1ebe5;
+    text-align: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
 
-h2.italic {
-  color: #f1ebe5;
+/* lunch buffet flex container */
+.flex-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+@media (max-width: 1000px) {
+  .flex-container {
+    flex-direction: column;
+  }
+}
+
+/* Flex item 1: buffet info container */
+.buffet-container {
+  height: auto;
+  width: clamp(300px, 100%, 1000px);
 }
 
 .buffet-info {
@@ -176,7 +282,6 @@ h2.italic {
 .buffet-info p {
   margin-top: 2rem;
   margin-bottom: 2rem;
-  width: clamp(300px, 100%, 900px);
 }
 
 .buffet-info h4 {
@@ -184,17 +289,10 @@ h2.italic {
   margin-bottom: 1rem;
   display: flex;
   justify-content: space-between;
-  width: clamp(300px, 100%, 900px);
-}
-
-hr {
-  width: clamp(300px, 100%, 900px);
 }
 
 /* Read more accordion */
 .more-info {
-  padding-left: 2rem;
-  padding-right: 2rem;
 }
 
 .more-info h4 {
@@ -240,14 +338,25 @@ hr {
   display: none;
 }
 
+/* Flex item 2: buffet deco flower */
+#buffet-img-flower {
+  width: clamp(150px, 100%, 361px);
+  margin-left: 2rem;
+  margin-right: 2rem;
+  align-self: center;
+}
+
+/* ------------------------------------------------------------*/
 /* Buttons */
+
+/* default button setting */
 .button {
   border-radius: 40px;
   font-family: "manrope";
-  font-size: 18px;
+  font-size: 20px;
   border: none;
   cursor: pointer;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 #nav-button {
@@ -255,22 +364,29 @@ hr {
   height: 47px;
   font-weight: 600;
   color: #212121;
+  font-size: 18px;
 }
 
 #nav-button:hover {
   background-color: #dddfd0;
 }
 
-#menu-button {
-  width: 245px;
+#explore-button {
+  width: 190px;
   height: 60px;
   background-color: white;
   color: #212121;
   margin-right: 1rem;
 }
 
-#menu-button:hover {
+#explore-button:hover {
   background-color: #dddfd0;
+}
+
+@media (max-width: 435px) {
+  #explore-button {
+    margin-bottom: 1rem;
+  }
 }
 
 #book-button {
@@ -281,6 +397,7 @@ hr {
   color: #dddfd0;
 }
 
+/* a la carte filter buttons */
 #small,
 #bao-buns,
 #bahn-mi,

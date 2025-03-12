@@ -9,6 +9,22 @@ h1 {
   letter-spacing: -3%;
 }
 
+@media (max-width: 1150px) {
+  h1 {
+    font-size: 75px;
+  }
+}
+
+@media (max-width: 620px) {
+  h1 {
+    font-size: 55px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+}
+
 h2 {
   font-family: "Manrope";
   font-size: 64px;
@@ -31,9 +47,15 @@ h2.light {
 h3 {
   font-family: "manrope";
   font-size: 30px;
-  line-height: 100%;
+  line-height: 120%;
   font-weight: 400;
   letter-spacing: -3%;
+}
+
+@media (max-width: 620px) {
+  h3 {
+    font-size: 25px;
+  }
 }
 
 h3.italic {
@@ -46,7 +68,7 @@ h3.italic {
 h4 {
   font-family: "manrope";
   font-size: 24px;
-  line-height: 100%;
+  line-height: 120%;
   font-weight: 400;
   letter-spacing: -3%;
   color: #5e655c;
@@ -65,7 +87,7 @@ h4.italic {
 p {
   font-family: "manrope";
   font-size: 18px;
-  line-height: 100%;
+  line-height: 130%;
   font-weight: 400;
   letter-spacing: -3%;
   color: #5e655c;

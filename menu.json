@@ -21,7 +21,7 @@
   ],
   "baos": [
     {
-      "name": "Smoky Hoisin Mushroom<",
+      "name": "Smoky Hoisin Mushroom",
       "price": "100",
       "description": "Oyster mushrooms, pickled cucumber, sriracha mayo, fresh herbs.",
       "allergens": "(Contains: Gluten, Soy, Sesame)"
@@ -54,7 +54,7 @@
       "allergens": " (Contains: Gluten, Soy, Sesame)"
     },
     {
-      "name": "Grilled King Oyster Mushroom<",
+      "name": "Grilled King Oyster Mushroom",
       "price": "100",
       "description": "Sesame aioli, crispy shallots, Vietnamese herbs. ",
       "allergens": "(Contains: Gluten, Sesame)"

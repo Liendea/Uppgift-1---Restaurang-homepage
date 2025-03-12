@@ -32,7 +32,7 @@
           <img src="./images/Botanique_logo.svg" alt="Botanique logo" />
         </div>
 
-        <div class="nav_links">
+        <div class="nav-links">
           <a href="#menu">Menu</a>
           <a href="#philosophy">Philosophy</a>
           <a href="#">History</a>
@@ -41,19 +41,26 @@
         <button type="button" id="nav-button" class="button">
           Book a table
         </button>
+
+        <!--- mobile nav -->
+        <div class="hamburger-nav">
+          <div class="line-1"></div>
+          <div class="line-2"></div>
+          <div class="line-3"></div>
+        </div>
       </nav>
 
       <!-- Header content -->
       <div class="header-text">
         <h1>Nourishing You, <br />Sustaining the Planet.</h1>
         <h3>
-          Elevating plant-based dining with flavors that are <br />as good for
+          Elevating plant-based dining with flavors that are as good for
           you as they are for the Earth
         </h3>
       </div>
       <div class="header-buttons">
-        <button type="button" id="menu-button" class="button">
-          Explore our menu
+        <button type="button" id="explore-button" class="button">
+          Explore menu
         </button>
         <button type="button" id="book-button" class="button">
           Book a table
@@ -62,7 +69,7 @@
     </header>
 
     <!-- Philosophy -->
-    <section id="philosophy">
+    <section id="philosophy-section">
       <div class="headline">
         <h4>
           At Botanique, we believe that great food should not only taste
@@ -107,7 +114,7 @@
       </div>
     </section>
 
-    <section id="menu">
+    <section id="menu-section">
       <h2 class="italic">À la Carte</h2>
 
       <!-- Menu filter buttons -->
@@ -172,74 +179,83 @@
       </div>
     </section>
 
-    <section>
-      <div class="buffet-intro">
+    <section class="buffet-section">
+      <!-- Lunch buffet header img -->
+      <div class="buffet-header">
         <!-- background img from css-->
         <h2 class="italic light">Plant-Based Lunch Buffet</h2>
       </div>
-
-      <div class="buffet">
+<div class="flex-container">
+      <!-- Lunch buffet container -->
+      <div class="buffet-container">
+        <!-- Lunch buffet content -->
         <div class="buffet-info">
-          <h3 class="italic">
-            A Fresh, Seasonal Feast – Every Monday to Friday
-          </h3>
-          <p>
-            Join us for a nourishing and flavor-packed plant-based lunch buffet,
-            carefully crafted with fresh, locally sourced ingredients. Our
-            ever-changing selection is inspired by the seasons, ensuring
-            vibrant, nutrient-rich dishes that celebrate the best nature has to
-            offer.
-          </p>
-          <hr />
-          <h4>
-            Available: Monday–Friday, 11:30–14:30 <span style="font-weight: 600;">Price: 450 kr</span>
-          </h4>
-          <hr />
-        </div>
-
-        <!-- More info -->
-        <div class="more-info hidden">
-            <h4 class="italic">What’s Included?</h4>
-            <ul id="buffet-list">
-              <li>
-                A rotating selection of warm and cold dishes, from fragrant
-                curries to refreshing salads
-              </li>
-              <li>
-                Hearty grains, seasonal vegetables, and house-made sauces bursting
-                with flavor
-              </li>
-              <li>Freshly baked bread, dips, and plant-based spreads</li>
-              <li>
-                A variety of protein-rich options, including marinated tofu,
-                tempeh, and legumes
-              </li>
-              <li>A daily soup made from scratch with organic produce</li>
-              <li>
-                Light, plant-based desserts to finish your meal on a sweet note
-              </li>
-              <li>Coffee & tea with plant-based milk alternatives</li>
-            </ul>
+            <h3 class="italic">
+              A Fresh, Seasonal Feast – Every Monday to Friday
+            </h3>
             <p>
-              We believe that lunch should be more than just a meal—it should be
-              an experience that fuels your body and respects the planet. Whether
-              you're dining in or taking away, our lunch buffet is designed to be
-              both satisfying and sustainable
-              <hr />
+              Join us for a nourishing and flavor-packed plant-based lunch buffet,
+              carefully crafted with fresh, locally sourced ingredients. Our
+              ever-changing selection is inspired by the seasons, ensuring
+              vibrant, nutrient-rich dishes that celebrate the best nature has to
+              offer.
             </p>
-            
+            <hr />
+            <h4>
+              Available: Monday–Friday, 11:30–14:30 <span style="font-weight: 600;">Price: 450 kr</span>
+            </h4>
+            <hr />
         </div>
 
+       
         <!-- Read more accordion -->
-        <div class="read-more">
+          <div class="read-more">
             <h4 id="more-less">Read more  </h4><img src="./images/Arrows.png" id="arrow">
             <br>
+            <!-- More info -->
+              <div class="more-info">
+                <h4 class="italic">What’s Included?</h4>
+                <ul id="buffet-list">
+                  <li>
+                    A rotating selection of warm and cold dishes, from fragrant
+                    curries to refreshing salads
+                  </li>
+                  <li>
+                    Hearty grains, seasonal vegetables, and house-made sauces bursting
+                    with flavor
+                  </li>
+                  <li>Freshly baked bread, dips, and plant-based spreads</li>
+                  <li>
+                    A variety of protein-rich options, including marinated tofu,
+                    tempeh, and legumes
+                  </li>
+                  <li>A daily soup made from scratch with organic produce</li>
+                  <li>
+                    Light, plant-based desserts to finish your meal on a sweet note
+                  </li>
+                  <li>Coffee & tea with plant-based milk alternatives</li>
+                </ul>
+                  <p>
+                    We believe that lunch should be more than just a meal—it should be
+                    an experience that fuels your body and respects the planet. Whether
+                    you're dining in or taking away, our lunch buffet is designed to be
+                    both satisfying and sustainable
+                  <hr />
+                  </p>   
+              </div>
+          </div>
         </div>
-        
+
+          <img src="./images/flower.svg" id="buffet-img-flower" width="3" alt="flowers">
       
+
     </div>
 
+
+
     </section>
+
+
 
     <script src="script.js"></script>
   </body>
