@@ -6,7 +6,7 @@
 
 /* header */
 header {
-  background-image: url(/images/header.png);
+  background-image: url(./images/header.png);
   background-repeat: no-repeat;
   background-size: cover;
   height: 900px;
@@ -155,7 +155,7 @@ header h3 {
 }
 
 .buffet-intro {
-  background-image: url(/images/buffet.png);
+  background-image: url(./images/buffet.png);
   background-repeat: no-repeat;
   background-size: cover;
   height: 367px;
