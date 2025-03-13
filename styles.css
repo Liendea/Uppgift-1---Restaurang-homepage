@@ -129,9 +129,9 @@ header h3 {
 }
 
 .headline h4 {
-  width: clamp(350px, 60%, 900px);
-  margin-right: auto;
-  margin-left: auto;
+  max-width: 100%;
+  margin-right: 2rem;
+  margin-left: 2rem;
   text-align: center;
 }
 
@@ -373,6 +373,12 @@ header h3 {
 
 .our-story h2 {
   margin-top: 3.75rem;
+}
+
+@media (max-width: 600px) {
+  .our-story h2 {
+    font-size: 45px;
+  }
 }
 
 .our-story h4 {
