@@ -152,7 +152,7 @@ header h3 {
   background-color: #f1ebe5;
   border-radius: 20px;
   width: 443px;
-  height: 430px;
+  height: auto;
   padding: 3rem;
 }
 
@@ -356,7 +356,7 @@ header h3 {
   background-image: url(./images/story.png);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 794px;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -368,16 +368,15 @@ header h3 {
   border-radius: 20px;
   background-color: #f1ebe5;
   text-align: center;
-  margin-top: 5.75rem;
-  margin-bottom: 5.75rem;
+  margin: 5.75rem 2rem 5.75rem 2rem;
 }
 
 .our-story h2 {
-  margin-bottom: 3rem;
   margin-top: 3.75rem;
 }
 
 .our-story h4 {
+  margin-top: 2rem;
   margin-bottom: 2rem;
 }
 
