@@ -293,8 +293,6 @@ header h3 {
 }
 
 /* Read more accordion */
-.more-info {
-}
 
 .more-info h4 {
   margin-top: 2rem;
@@ -388,8 +386,8 @@ header h3 {
 
 .our-story p {
   margin-bottom: 3.75rem;
-  padding-left: 5rem;
-  padding-right: 3.75rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
 }
 
 /* ------------------------------------------------------------*/
@@ -450,7 +448,6 @@ input {
 input::placeholder {
   color: #f1ebe5;
   font-size: 20px;
-  margin: none;
 }
 
 input:focus {
