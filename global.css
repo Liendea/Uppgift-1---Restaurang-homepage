@@ -84,6 +84,16 @@ h4.italic {
   color: #5e655c;
 }
 
+h5 {
+  font-family: "manrope";
+  font-size: 20px;
+  line-height: 130%;
+  font-weight: 400;
+  letter-spacing: -3%;
+  color: #dddfd0;
+  opacity: 50%;
+}
+
 p {
   font-family: "manrope";
   font-size: 18px;
@@ -97,4 +107,9 @@ p.italic {
   font-family: "libre Baskerville";
   font-style: italic;
   color: #5e655c;
+}
+
+.light {
+  color: #f1ebe5;
+  opacity: 100%;
 }

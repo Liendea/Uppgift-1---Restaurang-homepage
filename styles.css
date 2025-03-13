@@ -72,7 +72,7 @@ nav a:hover {
 .line-1,
 .line-2,
 .line-3 {
-  height: 4px;
+  height: 1px;
   background-color: white;
   width: 40px;
 }
@@ -393,6 +393,218 @@ header h3 {
 }
 
 /* ------------------------------------------------------------*/
+/* Contact */
+#contact-section {
+  background-color: #404c3f;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-bottom: 8rem;
+  height: auto;
+}
+
+/* flex item 1 */
+.contact-container {
+  margin-top: 8rem;
+  width: 45%;
+  padding-right: 1rem;
+}
+
+.contact-text h2 {
+  margin-bottom: 3rem;
+}
+
+.contact-text p {
+  margin-bottom: 3rem;
+}
+
+.form-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+}
+
+.name,
+.email {
+  width: 100%;
+}
+
+input {
+  background-color: #404c3f;
+  border: none;
+  border-bottom: 1px solid #5e655c;
+
+  font-size: 20px;
+  font-family: "manrope";
+  color: #f1ebe5;
+
+  padding-bottom: 1rem;
+  margin-bottom: 3rem;
+
+  width: 100%;
+}
+
+input::placeholder {
+  color: #f1ebe5;
+  font-size: 20px;
+  margin: none;
+}
+
+input:focus {
+  outline: none;
+  border-color: #f1ebe5;
+}
+
+label {
+  /* for textarea */
+  font-family: "manrope";
+  color: #f1ebe5;
+  font-size: 20px;
+  font-size: 20px;
+}
+
+.message {
+  width: 100%;
+}
+
+textarea {
+  width: 100%;
+  background-color: #404c3f;
+  border: none;
+  border-bottom: 1px solid #5e655c;
+  font-size: 20px;
+  font-family: "manrope";
+  color: #f1ebe5;
+  resize: none;
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #f1ebe5;
+}
+
+/* flex item 2 */
+.img-container {
+  width: 45%;
+  margin-top: 8rem;
+  background-image: url(./images/contact.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+}
+
+@media (max-width: 900px) {
+  #contact-section {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  /* flex item 1 */
+  .contact-container {
+    width: 100%;
+  }
+
+  .form-container {
+    width: 60%;
+  }
+
+  /* flex item 2 */
+  .img-container {
+    width: 100%;
+    height: 500px;
+    background-image: url(./images/contact.png);
+    justify-items: center;
+  }
+}
+
+/* ------------------------------------------------------------*/
+/* Footer */
+
+footer {
+  background-image: url(./images/footer.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: auto;
+  padding: 2rem;
+}
+
+.footer-logo-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 5rem;
+}
+
+footer a {
+  color: #dddfd0;
+  text-decoration: none;
+}
+
+.footer-logo-container img {
+  width: 100%;
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-nav div {
+  margin: 1rem;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: flex-start;
+}
+.social-icons2 {
+  display: none;
+}
+
+.social-icons img {
+  margin-right: 1rem;
+  cursor: pointer;
+  width: 2.5rem;
+  align-self: flex-start;
+}
+@media (max-width: 900px) {
+  .social-icons {
+    display: none;
+  }
+
+  .social-icons2 {
+    display: block;
+    justify-self: center;
+    margin-top: 3rem;
+  }
+
+  .social-icons2 img {
+    margin: 1rem;
+    cursor: pointer;
+    width: 2.5rem;
+  }
+}
+
+@media (max-width: 836px) {
+  .footer-nav {
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 400px) {
+  .footer-nav {
+    flex-direction: column-reverse;
+  }
+}
+
+/* ------------------------------------------------------------*/
 /* Buttons */
 
 /* default button setting */
@@ -453,4 +665,28 @@ header h3 {
   padding: 1rem 2rem 1rem 2rem;
   background-color: white;
   margin: 5px;
+}
+
+@media (max-width: 600px) {
+  #small,
+  #bao-buns,
+  #bahn-mi,
+  #bowls,
+  #desserts,
+  #drinks {
+    font-size: 15px;
+  }
+}
+
+.submit-button {
+  width: 190px;
+  height: 60px;
+  background: none;
+  border: #f1ebe5 1px solid;
+  color: #f1ebe5;
+}
+
+.submit-button:hover {
+  color: #5e655c;
+  background-color: #f1ebe5;
 }

@@ -118,6 +118,7 @@
       </div>
     </section>
 
+    <!-- Menu Section -->
     <section id="menu-section">
       <h2 class="italic">À la Carte</h2>
 
@@ -171,6 +172,7 @@
       </div>
     </section>
 
+    <!-- Buffet section -->
     <section class="buffet-section">
       <!-- Lunch buffet header -->
       <div class="buffet-header">
@@ -250,6 +252,7 @@
       </div>
     </section>
 
+    <!-- Our story section -->
     <section id="story-section">
       <div class="our-story">
         <h2 class="italic">Our Story</h2>
@@ -275,7 +278,127 @@
       </div>
     </section>
 
-    <section class="contact-section"></section>
+    <!-- Contact section -->
+    <section id="contact-section">
+      <div class="contact-container">
+        <!-- text contaienr -->
+        <div class="contact-text">
+          <h2 class="italic light">Contact</h2>
+          <p class="light">
+            We are happy to hear from you! <br />
+            <br />
+            If you have any inquiries, collab ideas, event booking request or
+            want to make a reservation for larger companies (more than 10
+            persons) please contact us via this contact form or call us (+46 123
+            456 78) during our opening hours.
+            <br />
+          </p>
+        </div>
+        <!-- form contaienr -->
+        <div class="form-container">
+          <form
+            action="https://formsubmit.co/bengtsson-linda@outlook.com"
+            method="POST"
+          >
+            <!-- Name input -->
+            <div class="name">
+              <label for="name"></label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Name"
+                required
+              />
+            </div>
+
+            <!-- E-mail  input -->
+            <div class="email">
+              <label for="email"></label>
+              <input
+                type="email"
+                name="E-mail"
+                id="email"
+                placeholder="E-mail"
+                required
+              />
+            </div>
+
+            <div class="message">
+              <label for="textarea">Message </label>
+              <textarea id="textarea" name="textarea" required></textarea>
+            </div>
+
+            <input type="hidden" name="_next" value="thankyou.html" />
+            <button type="submit" class="submit-button button">Send</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="img-container">
+        <!-- image fom css -->
+      </div>
+    </section>
+
+    <!-- Footer section -->
+    <footer>
+      <div class="footer-logo-container">
+        <img src="./images/footer_logo.svg" alt="big logotype" />
+      </div>
+
+      <div class="footer-nav">
+        <div class="social-icons">
+          <img src="./images/instagram.svg" alt="social media icon" />
+          <img src="./images/fb.svg" alt="social media icon" />
+        </div>
+        <!--Opening hours -->
+        <div class="opening-hours">
+          <h5>Opening Hours</h5>
+          <br />
+          <h5 class="light">
+            Mon - Fri: 11-22<br />
+            Sat: 17- 00<br />
+            Sun: Closed
+          </h5>
+        </div>
+        <!-- Explore -->
+        <div class="explore">
+          <h5>Explore</h5>
+          <br />
+          <h5 class="light">
+            <a href="#menu-section">Our Menu</a> <br />
+            <a href="#story-section">History</a><br />
+            <a href="#contact-section">Contact</a>
+          </h5>
+        </div>
+        <!--Legal-->
+        <div class="legal">
+          <h5>Legal</h5>
+          <br />
+          <h5 class="light">
+            <a href="#">Privacy policy</a> <br />
+            <a href="#">Cookie settings</a><br />
+            <a href="#">Imprint</a>
+          </h5>
+        </div>
+
+        <!--Adress -->
+        <div class="Adress">
+          <h5>Address</h5>
+          <br />
+          <h5 class="light">
+            Fjällgatan 37<br />
+            837 93<br />
+            Åre
+          </h5>
+        </div>
+      </div>
+
+      <div class="social-icons2">
+        <img src="./images/instagram.svg" alt="social media icon" />
+        <img src="./images/fb.svg" alt="social media icon" />
+      </div>
+    </footer>
 
     <script src="script.js"></script>
   </body>
