@@ -20,3 +20,17 @@ hamburger_button.addEventListener("click", () => {
     body.style.removeProperty("overflow");
   }
 });
+
+const mobile_nav_links = document.querySelectorAll(".mobile-nav-links");
+
+mobile_nav_links.forEach((link) => {
+  link.addEventListener("click", () => {
+    console.log("klickad");
+    body.style.removeProperty("overflow");
+
+    mobile_nav.classList.add("hidden");
+    hamburger_top.classList.toggle("clicked");
+    hamburger_middle.classList.toggle("clicked");
+    hamburger_bottom.classList.toggle("clicked");
+  });
+});
