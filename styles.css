@@ -522,7 +522,6 @@ textarea:focus {
 
 /* ------------------------------------------------------------*/
 /* Footer */
-
 footer {
   background-image: url(./images/footer.png);
   background-repeat: no-repeat;
@@ -590,8 +589,8 @@ footer a {
 
 @media (max-width: 836px) {
   .footer-nav {
-    flex-wrap: wrap-reverse;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
   }
 }
 
@@ -599,6 +598,12 @@ footer a {
   .footer-nav {
     flex-direction: column-reverse;
   }
+}
+
+/* ------------------------------------------------------------*/
+/* Hr lines */
+hr {
+  border: 1px solid #404c3f2b;
 }
 
 /* ------------------------------------------------------------*/
@@ -653,26 +658,21 @@ footer a {
 }
 
 /* a la carte filter buttons */
-#small,
-#bao-buns,
-#bahn-mi,
-#bowls,
-#desserts,
-#drinks {
-  padding: 1rem 2rem 1rem 2rem;
+.filter-button {
+  padding: 0.5rem 1.5rem;
   background-color: white;
   margin: 5px;
+  font-size: 15px;
+  color: #404c3f;
 }
 
-@media (max-width: 600px) {
-  #small,
-  #bao-buns,
-  #bahn-mi,
-  #bowls,
-  #desserts,
-  #drinks {
-    font-size: 15px;
-  }
+.filter-button:hover {
+  background-color: #404c3f;
+  color: #f1ebe5;
+}
+
+.active {
+  background-color: #404c3f37;
 }
 
 .submit-button {

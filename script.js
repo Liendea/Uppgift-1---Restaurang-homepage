@@ -1,143 +1,86 @@
 "use strict";
 
-// Collect menu content from JSON
+// Menu section fetch menu from JSON file
+
+// Step 1: Collect all container elements in an object
+const containers = {
+  starters: document.querySelector(".starters"),
+  baos: document.querySelector(".baos"),
+  bahn_mi: document.querySelector(".bahn-mi"),
+  bowls: document.querySelector(".sig-bowls"),
+  desserts: document.querySelector(".desserts"),
+  drinks: document.querySelector(".drinks"),
+};
+
+// Step 2: Function to create menu items
+function createMenuItem(item) {
+  const menuItem = document.createElement("div");
+  menuItem.classList.add("menu-item");
+
+  menuItem.innerHTML = `
+      <div class="dish">
+        <h4 class="italic">${item.name}</h4>
+        <h4 class="italic">${item.price}</h4>
+      </div>
+      <hr />
+      <p>${item.description}<br />
+        ${item.allergens}
+      </p>
+    `;
+
+  return menuItem;
+}
+
+// Step 3: Fetch and loop through meny
 fetch("menu.json")
-  .then(function (response) {
-    return response.json();
-  })
+  .then((response) => response.json())
+  .then((menu) => {
+    // Loop thorugh every menu group
+    Object.keys(containers).forEach((category) => {
+      const container = containers[category]; // Chose container from container object, For example containers["starter"].
+      const items = menu[category]; // for example menu["starters"]
 
-  .then(function (menu) {
-    console.table(menu);
-    const starters = menu.starters;
-    const baos = menu.baos;
-    const bahn_mi = menu.bahn_mi;
-    const bowls = menu.bowls;
-    const desserts = menu.desserts;
-    const drinks = menu.drinks;
-
-    // Starters
-    const starter_container = document.querySelector(".starters");
-
-    starters.forEach((starter) => {
-      const starter_item = document.createElement("div");
-      starter_item.classList.add("menu-item");
-
-      starter_item.innerHTML = `
-          <!-- Starter item -->
-            <div class="dish">
-              <h4 class="italic">${starter.name}</h4>
-              <h4 class="italic">${starter.price}</h4>
-            </div>
-            <hr />
-            <p>${starter.description}<br />
-              ${starter.allergens}
-            </p>
-      `;
-
-      starter_container.appendChild(starter_item);
-    });
-
-    // Bao Buns
-    const bao_container = document.querySelector(".baos");
-
-    baos.forEach((bao) => {
-      const bao_item = document.createElement("div");
-      bao_item.classList.add("menu-item");
-      bao_item.innerHTML = `   
-        <!-- Bao item -->
-            <div class="dish">
-              <h4 class="italic">${bao.name}</h4>
-              <h4 class="italic">${bao.price}</h4>
-            </div>
-            <hr />
-            <p>${bao.description}<br />
-              ${bao.allergens}
-            </p>`;
-
-      bao_container.appendChild(bao_item);
-    });
-
-    // Bahn Mi
-    const bahnMi_container = document.querySelector(".bahn-mi");
-
-    bahn_mi.forEach((bahnMi) => {
-      const bahnMi_item = document.createElement("div");
-      bahnMi_item.classList.add("menu-item");
-      bahnMi_item.innerHTML = `   
-         <!-- Bahn Mi item -->
-             <div class="dish">
-               <h4 class="italic">${bahnMi.name}</h4>
-               <h4 class="italic">${bahnMi.price}</h4>
-             </div>
-             <hr />
-             <p>${bahnMi.description}<br />
-               ${bahnMi.allergens}
-             </p>`;
-
-      bahnMi_container.appendChild(bahnMi_item);
-    });
-
-    // Bowls
-    const bowls_container = document.querySelector(".sig-bowls");
-
-    bowls.forEach((bowl) => {
-      const bowl_item = document.createElement("div");
-      bowl_item.classList.add("menu-item");
-      bowl_item.innerHTML = `   
-         <!-- Bowl item -->
-             <div class="dish">
-               <h4 class="italic">${bowl.name}</h4>
-               <h4 class="italic">${bowl.price}</h4>
-             </div>
-             <hr />
-             <p>${bowl.description}<br />
-               ${bowl.allergens}
-             </p>`;
-
-      bowls_container.appendChild(bowl_item);
-    });
-
-    // Desserts
-    const dessert_container = document.querySelector(".desserts");
-
-    desserts.forEach((dessert) => {
-      const dessert_item = document.createElement("div");
-      dessert_item.classList.add("menu-item");
-      dessert_item.innerHTML = `   
-         <!-- Bowl item -->
-             <div class="dish">
-               <h4 class="italic">${dessert.name}</h4>
-               <h4 class="italic">${dessert.price}</h4>
-             </div>
-             <hr />
-             <p>${dessert.description}<br />
-               ${dessert.allergens}
-             </p>`;
-
-      dessert_container.appendChild(dessert_item);
-    });
-
-    // Drinnks & refreshments
-    const drink_container = document.querySelector(".drinks");
-
-    drinks.forEach((drink) => {
-      const drink_item = document.createElement("div");
-      drink_item.classList.add("menu-item");
-      drink_item.innerHTML = `   
-             <!-- Bowl item -->
-                 <div class="dish">
-                   <h4 class="italic">${drink.name}</h4>
-                   <h4 class="italic">${drink.price}</h4>
-                 </div>
-                 <hr />
-                 <p>${drink.description}<br />
-                   ${drink.allergens}
-                 </p>`;
-
-      drink_container.appendChild(drink_item);
+      items.forEach((item) => {
+        // For each item (dish) in menu category
+        const menuItem = createMenuItem(item); // call createMenuItem function
+        container.appendChild(menuItem); // append menuItem to container
+      });
     });
   });
 
+// Menu filter buttons
+const filter_buttons = document.querySelectorAll(".filter-button");
+
+filter_buttons.forEach((button) => {
+  button.addEventListener("click", () => {
+    // Växla "active" klass på knappen (lägg till eller ta bort)
+    button.classList.toggle("active");
+
+    const activeButtons = document.querySelectorAll(".filter-button.active");
+    if (activeButtons.length === 0) {
+      Object.values(containers).forEach((container) => {
+        container.classList.remove("hidden");
+      });
+    } else {
+      // Gå igenom ALLA knappar och uppdatera respektive container
+      filter_buttons.forEach((btn) => {
+        // Hämta vilken container denna knapp pekar på
+        const target = btn.getAttribute("data-target");
+        const container = containers[target];
+
+        // Om knappen är aktiv, visa containern
+        if (btn.classList.contains("active")) {
+          container.classList.remove("hidden");
+        } else {
+          // Annars dölj containern
+          container.classList.add("hidden");
+        }
+      });
+    }
+  });
+});
+
+// Lunch buffet read more toggle
 const read_more = document.querySelector(".read-more");
 const more_info = document.querySelector(".more-info");
 const more_less = document.querySelector("#more-less");
