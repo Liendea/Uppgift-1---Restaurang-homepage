@@ -501,7 +501,7 @@ input {
   background-color: #404c3f;
   border: none;
   border-bottom: 1px solid #5e655c;
-
+  outline: none;
   font-size: 20px;
   font-family: "manrope";
   color: #f1ebe5;
@@ -545,6 +545,7 @@ textarea {
   resize: none;
   margin-top: 3rem;
   margin-bottom: 5rem;
+  outline: none;
 }
 
 textarea:focus {
@@ -584,6 +585,10 @@ textarea:focus {
     height: 500px;
     background-image: url(./images/contact.png);
     justify-items: center;
+  }
+  textarea:focus {
+    outline: none;
+    border-color: #f1ebe5;
   }
 }
 
