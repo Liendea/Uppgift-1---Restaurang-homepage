@@ -54,9 +54,47 @@ nav a:hover {
   text-underline-offset: 10px;
 }
 
-/* hamburger navigation menu */
+/* mobile nav menu */
+
+.mobile-nav {
+  width: 100%;
+  height: 100vh;
+  background-color: #404c3f;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  padding: 2rem;
+}
+
+.mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5rem;
+}
+
+.mobile-nav-links a {
+  margin-bottom: 3rem;
+  text-decoration: none;
+  color: #f1ebe5;
+  font-family: "Manrope";
+  font-size: 25px;
+}
+
+.mobile-nav-links a:hover {
+  font-weight: bolder;
+}
+
+.mobile-nav-flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* hamburger button */
 
 .hamburger-nav {
+  z-index: 100;
   display: none;
   width: 50px;
   height: 50px;
@@ -86,6 +124,26 @@ nav a:hover {
 .line-3 {
   transform: translateY(30px);
 }
+
+/* Style lines When hamburger button is clicked */
+.line-1,
+.line-2,
+.line-3 {
+  transition: transform 0.3s ease, translateY 0.3s ease, translateX 0.3s ease; /* Lägg till transitioner för transform, translateY och translateX */
+}
+
+.line-1.clicked {
+  transform: rotate(45deg) translateY(15px) translateX(15px);
+}
+
+.line-2.clicked {
+  display: none;
+}
+
+.line-3.clicked {
+  transform: rotate(-45deg) translateY(15px) translateX(-15px);
+}
+
 /* header */
 header {
   background-image: url(./images/header.png);
