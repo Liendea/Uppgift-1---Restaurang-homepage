@@ -44,12 +44,8 @@
 }
 
 @media (max-width: 435px) {
-  #explore-button,
-  #book-button {
+  #explore-button {
     margin-bottom: 1rem;
-    width: 150px;
-    height: 40px;
-    font-size: 15px;
   }
 }
 
