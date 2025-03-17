@@ -25,7 +25,6 @@ const mobile_nav_links = document.querySelectorAll(".mobile-nav-links");
 
 mobile_nav_links.forEach((link) => {
   link.addEventListener("click", () => {
-    console.log("klickad");
     body.style.removeProperty("overflow");
 
     mobile_nav.classList.add("hidden");
