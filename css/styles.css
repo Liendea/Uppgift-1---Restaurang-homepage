@@ -4,14 +4,34 @@
   box-sizing: border-box;
 }
 
+/* no scroll when mobile meny is open */
+body .no-scroll {
+  overflow: hidden;
+  height: 100%;
+}
+
 /* Navigation links & button */
-nav {
+.nav-container {
   font-family: "manrope";
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   padding: 2rem;
   align-items: center;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.scroll-down {
+  transform: translate3d(0, -100%, 0);
+}
+
+.scroll-up {
+  background-color: #5e655c;
 }
 
 .logo img {
@@ -62,6 +82,7 @@ nav a:hover {
   overflow: hidden;
   position: absolute;
   top: 0;
+  left: 0;
   padding: 2rem;
 }
 
@@ -82,14 +103,14 @@ nav a:hover {
 
 .mobile-nav-links a:hover {
   font-weight: bolder;
+  text-decoration: none;
 }
 
-.mobile-nav-flex-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+#logo-link {
+  justify-self: flex-start;
+  align-self: flex-start;
+  margin-top: 5px;
 }
-
 /* hamburger button */
 .hamburger-nav {
   z-index: 100;
@@ -127,7 +148,7 @@ nav a:hover {
 .line-1,
 .line-2,
 .line-3 {
-  transition: transform 0.3s ease, translateY 0.3s ease, translateX 0.3s ease; /* Lägg till transitioner för transform, translateY och translateX */
+  transition: transform 0.3s ease, translateY 0.3s ease, translateX 0.3s ease;
 }
 
 .line-1.clicked {
@@ -144,24 +165,21 @@ nav a:hover {
 
 /* header */
 header {
-  background-image: url(./images/header.png);
+  background-image: url(../images/header.png);
   background-repeat: no-repeat;
   background-size: cover;
   height: auto;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 .header-text {
   color: #dddfd0;
-  margin-top: 20rem;
+  padding-top: 20rem;
   margin-left: 2rem;
   margin-right: 2rem;
-}
-
-/* remove margin-top on smaller screens*/
-@media (max-width: 600px) {
-  .header-text {
-    margin-top: 5rem;
-  }
 }
 
 header h1 {
@@ -305,7 +323,7 @@ header h3 {
 
 /* Buffet header */
 .buffet-header {
-  background-image: url(./images/buffet.png);
+  background-image: url(../images/buffet.png);
   background-repeat: no-repeat;
   background-size: cover;
   height: 367px;
@@ -417,7 +435,7 @@ header h3 {
 /* ---- Story section ---- */
 
 #story-section {
-  background-image: url(./images/story.png);
+  background-image: url(../images/story.png);
   background-repeat: no-repeat;
   background-size: cover;
   height: auto;
@@ -556,7 +574,7 @@ textarea:focus {
 .img-container {
   width: 45%;
   margin-top: 8rem;
-  background-image: url(./images/contact.png);
+  background-image: url(../images/contact.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -582,7 +600,7 @@ textarea:focus {
   .img-container {
     width: 100%;
     height: 500px;
-    background-image: url(./images/contact.png);
+    background-image: url(../images/contact.png);
     justify-items: center;
   }
   textarea:focus {
@@ -594,7 +612,7 @@ textarea:focus {
 /* ------------------------------------------------------------*/
 /* Footer */
 footer {
-  background-image: url(./images/footer.png);
+  background-image: url(../images/footer.png);
   background-repeat: no-repeat;
   background-size: cover;
   height: auto;
