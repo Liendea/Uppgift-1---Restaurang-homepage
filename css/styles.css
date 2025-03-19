@@ -106,11 +106,14 @@ nav a:hover {
   text-decoration: none;
 }
 
-#logo-link {
-  justify-self: flex-start;
-  align-self: flex-start;
-  margin-top: 5px;
+nav .social-icons2 {
+  border-style: dotted;
 }
+
+nav .social-icons2 img {
+  border-style: dotted;
+}
+
 /* hamburger button */
 .hamburger-nav {
   z-index: 100;

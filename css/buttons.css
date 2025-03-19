@@ -87,3 +87,25 @@
   color: #5e655c;
   background-color: #f1ebe5;
 }
+
+.book-now-btn {
+  background-color: #f1ebe5;
+  color: #5e655c;
+}
+
+.book-now-btn:hover {
+  background-color: #5e655c;
+  color: #f1ebe5;
+}
+@media (max-width: 500px) {
+  .book-now-btn {
+    font-size: 15px;
+    width: 140px;
+    height: 40px;
+  }
+  #nav-button {
+    font-size: 15px;
+    width: 140px;
+    height: 40px;
+  }
+}

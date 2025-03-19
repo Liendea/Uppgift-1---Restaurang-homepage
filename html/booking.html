@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BOTANIQUE | Reservation</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.svg" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/buttons.css" />
+    <link rel="stylesheet" href="../css/booking.css" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/da493979b6.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <header>
+      <!-- Navigation -->
+      <nav class="nav-container">
+        <div class="logo">
+          <a href="#"
+            ><img src="../images/Botanique_logo.svg" alt="Botanique logo"
+          /></a>
+        </div>
+
+        <button
+          type="button"
+          id="nav-button"
+          class="button"
+          onclick="window.location.href='../index.html'"
+        >
+          Go back
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <div class="link-container">
+        <a href="../index.html" id="go-back-link"> <- Go back </a>
+      </div>
+
+      <div class="form-container">
+        <h3>TABLE RESERVATION</h3>
+        <form>
+          <!-- Number of guests -->
+          <div class="guests-container">
+            <label for="guests"> Number of guests: </label>
+            <select id="guests" name="guests" required>
+              <option value="" id="default" selceted>Select</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+            </select>
+          </div>
+
+          <!-- Date -->
+          <div class="date-container">
+            <label for="date-input">Select date:</label>
+            <input type="date" id="date-input" name="date-input" />
+          </div>
+
+          <!-- Time -->
+          <!-- Dinner : Weekdays-->
+          <div class="dinner-weekdays hidden">
+            <label for="dinner-weekdays">Dinner:</label>
+            <select id="dinner-weekdays" name="dinner-weekdays">
+              <option value="" id="default" disabled selected>
+                Select time
+              </option>
+              <option value="1">17:00</option>
+              <option value="2">17:30</option>
+              <option value="3">18:00</option>
+              <option value="4">18:30</option>
+              <option value="5">19:00</option>
+              <option value="6">19:30</option>
+              <option value="7">20:00</option>
+              <option value="8">20:30</option>
+              <option value="9">21:00</option>
+            </select>
+          </div>
+
+          <!-- Dinner : Saturdays -->
+          <div class="dinner-saturday hidden">
+            <label for="dinner-saturday">Dinner:</label>
+            <select id="dinner-saturday" name="dinner-saturday">
+              <option value="" id="default" disabled selected>
+                Select time
+              </option>
+              <option value="1">17:00</option>
+              <option value="2">17:30</option>
+              <option value="3">18:00</option>
+              <option value="4">18:30</option>
+              <option value="5">19:00</option>
+              <option value="6">19:30</option>
+              <option value="7">20:00</option>
+              <option value="8">20:30</option>
+              <option value="9">21:00</option>
+              <option value="10">21:30</option>
+              <option value="11">22:00</option>
+              <option value="12">22:30</option>
+              <option value="13">23:00</option>
+            </select>
+          </div>
+
+          <!-- Lunch : Weekdays-->
+          <div class="lunch-container hidden">
+            <label for="lunch-time">Lunch:</label>
+            <select id="lunch-time" name="lunch-time">
+              <option value="" id="default" selected>Select time</option>
+              <option value="1">11:00</option>
+              <option value="2">11:15</option>
+              <option value="3">11:30</option>
+              <option value="4">11:45</option>
+              <option value="5">12:00</option>
+              <option value="6">12:15</option>
+              <option value="7">12:30</option>
+              <option value="8">12:45</option>
+              <option value="9">13:00</option>
+              <option value="10">13:15</option>
+              <option value="11">13:30</option>
+            </select>
+          </div>
+
+          <div class="book-button-container">
+            <button type="submit" class="button submit-button book-now-btn">
+              Book now
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <div class="opening-hours-container">
+        <div class="opening-hours-dinner">
+          <h4 class="italic">Dinner:</h4>
+          <h5 class="light">Mon - Fri: 17 - 22</h5>
+          <h5 class="light">Sat: 17 - 00</h5>
+          <h5 class="light">Sun: Closed</h5>
+        </div>
+        <div class="opening-hours-lunch">
+          <h4 class="italic">Lunch:</h4>
+          <h5 class="light">Mon - Fri: 11 - 14</h5>
+          <h5 class="light">Sun: Closed</h5>
+        </div>
+      </div>
+    </main>
+
+    <script src="../js/booking.js"></script>
+    <script src="../js/navigation.js"></script>
+  </body>
+</html>

@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #5e655c;
+  height: 100vh;
+}
+
+/* Navigation links & button */
+.nav-container {
+  font-family: "manrope";
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2rem;
+  align-items: center;
+}
+
+#nav-button {
+  display: block;
+}
+
+#go-back-link {
+  display: none;
+}
+
+@media (max-width: 450px) {
+  #go-back-link {
+    display: block;
+  }
+  #nav-button {
+    display: none;
+  }
+}
+
+.logo img {
+  display: block;
+}
+
+main {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 800px;
+  z-index: 55;
+  padding: 2rem;
+}
+
+@media (max-width: 500px) {
+  main {
+    padding: 1rem;
+  }
+}
+
+.link-container {
+  width: 90%;
+  display: flex;
+}
+.link-container a {
+  color: #e0e5df;
+  font-size: 18px;
+  text-decoration: none;
+  font-family: "manrope";
+}
+
+.link-container a:hover {
+  font-weight: bolder;
+}
+
+.opening-hours-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
+
+  padding: 2rem;
+}
+
+.opening-hours-container h4 {
+  color: #dddfd0;
+  font-size: 30px;
+  font-weight: 600;
+}
+.opening-hours-container h5 {
+  color: #f1ebe5;
+}
+.opening-hours-dinner {
+  margin-bottom: 2rem;
+  margin-right: 5rem;
+}
+
+/* booking Form */
+
+.form-container {
+  background-color: #fff;
+  width: clamp(350px, 90%, 600px);
+  height: auto;
+  font-family: "manrope";
+  font-size: 18px;
+  border-radius: 10px;
+  padding: 2rem;
+  margin-top: 1rem;
+}
+
+.form-container h3 {
+  margin-bottom: 1rem;
+  font-weight: bold;
+  color: #5e655c;
+}
+
+.guests-container,
+.lunch-container,
+.date-container,
+.dinner-weekdays,
+.dinner-saturday {
+  border: 1px solid #e0e5df;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.book-button-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+select {
+  background-color: #fff;
+  outline: none;
+  border: none;
+  width: 8rem;
+  text-align: center;
+  padding: 0.5rem;
+  font-size: 18px;
+  color: #5e655c;
+}
+
+input {
+  padding: 0.5rem;
+  outline: none;
+  border: none;
+  font-size: 18px;
+  color: #5e655c;
+  font-family: "manrope";
+  font-weight: 500;
+}
+
+label {
+  color: #5e655c;
+  margin-top: 6px;
+}
+
+@media (max-width: 500px) {
+  .form-container {
+    font-size: 15px;
+    border-radius: 10px;
+    padding: 1rem;
+  }
+
+  select {
+    width: 8rem;
+    font-size: 15px;
+  }
+
+  input {
+    font-size: 15px;
+  }
+}
+
+/* hidden class*/
+.hidden {
+  display: none;
+}

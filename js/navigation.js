@@ -29,7 +29,7 @@ hamburger_button.addEventListener("click", () => {
 
 ///////////////////////////////////////////////////////////
 
-// Close mobile manu if window is resized
+// Close mobile meny if window is resized
 
 window.addEventListener("resize", () => {
   // IF mobile meny is open and window is larget than 1000 px then HIDE mobile meny and hamburger button

@@ -50,6 +50,12 @@ h2.italic {
   color: #5e655c;
 }
 
+@media (max-width: 900px) {
+  h2 {
+    font-size: 40px;
+  }
+}
+
 h2.light {
   color: #f1ebe5;
 }
@@ -60,6 +66,7 @@ h3 {
   line-height: 120%;
   font-weight: 400;
   letter-spacing: -3%;
+  color: #dddfd0;
 }
 
 @media (max-width: 620px) {
