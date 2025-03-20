@@ -107,11 +107,8 @@ nav a:hover {
 }
 
 nav .social-icons2 {
-  border-style: dotted;
-}
-
-nav .social-icons2 img {
-  border-style: dotted;
+  display: flex;
+  justify-content: center;
 }
 
 /* hamburger button */

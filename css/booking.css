@@ -57,6 +57,7 @@ main {
   }
 }
 
+/* Go back to homepage link */
 .link-container {
   width: 90%;
   display: flex;
@@ -72,14 +73,16 @@ main {
   font-weight: bolder;
 }
 
+/* opening hours info */
 .opening-hours-container {
   width: 100%;
   height: auto;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
-  flex-direction: row;
+  align-items: flex-end;
 
+  margin-top: 3rem;
   padding: 2rem;
 }
 
@@ -93,10 +96,9 @@ main {
 }
 .opening-hours-dinner {
   margin-bottom: 2rem;
-  margin-right: 5rem;
 }
 
-/* booking Form */
+/* Booking Form */
 
 .form-container {
   background-color: #fff;
@@ -119,7 +121,8 @@ main {
 .lunch-container,
 .date-container,
 .dinner-weekdays,
-.dinner-saturday {
+.dinner-saturday,
+.input-container {
   border: 1px solid #e0e5df;
   display: flex;
   justify-content: space-between;
@@ -131,6 +134,40 @@ main {
 .book-button-container {
   display: flex;
   justify-content: flex-end;
+}
+
+.guest-info-container {
+  border-top: 1px solid #5e655c;
+  padding-top: 1rem;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.guest-info-container h4 {
+  margin-bottom: 1rem;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.input-container {
+  width: 49%;
+}
+
+.input-container input {
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .input-container {
+    width: 100%;
+  }
 }
 
 select {

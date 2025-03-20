@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #5e655c;
+  height: 100vh;
+}
+
+/* Navigation links & button */
+.nav-container {
+  font-family: "manrope";
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2rem;
+  align-items: center;
+}
+
+#nav-button {
+  display: block;
+}
+
+/* Go back to homepage link */
+.link-container {
+  width: 90%;
+  display: flex;
+}
+.link-container a {
+  color: #e0e5df;
+  font-size: 18px;
+  text-decoration: none;
+  font-family: "manrope";
+}
+
+.link-container a:hover {
+  font-weight: bolder;
+}
+
+#go-back-link {
+  display: none;
+}
+
+@media (max-width: 450px) {
+  #go-back-link {
+    display: block;
+  }
+  #nav-button {
+    display: none;
+  }
+}
+
+.logo img {
+  display: block;
+}
+
+main {
+  width: 100%;
+  height: auto;
+  padding: 2rem;
+}
+
+.message-container {
+  text-align: center;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+h2 {
+  margin-bottom: 2rem;
+}
