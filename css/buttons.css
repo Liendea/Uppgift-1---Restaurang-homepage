@@ -63,6 +63,13 @@
   color: #f1ebe5;
 }
 
+@media (max-width: 450px) {
+  .filter-button:hover {
+    background-color: #404c3f37;
+    color: #404c3f;
+  }
+}
+
 .active {
   background-color: #404c3f37;
   color: #404c3f;

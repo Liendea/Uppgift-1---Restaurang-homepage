@@ -58,9 +58,10 @@ const filter_buttons = document.querySelectorAll(".filter-button");
 
 filter_buttons.forEach((button) => {
   button.addEventListener("click", () => {
-    // Växla "active" klass på knappen (lägg till eller ta bort)
+    // Växla "active" klass på knappen
     button.classList.toggle("active");
 
+    // OM ingen filterknapp är tryckt så visa hela menyn
     const activeButtons = document.querySelectorAll(".filter-button.active");
     if (activeButtons.length === 0) {
       Object.values(containers).forEach((container) => {
