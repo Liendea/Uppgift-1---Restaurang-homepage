@@ -1,4 +1,8 @@
 /* text setting */
+a {
+  text-decoration: none;
+  color: #dddfd0;
+}
 
 h1 {
   font-family: "libre Baskerville";
