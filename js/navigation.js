@@ -21,7 +21,7 @@ hamburger_button.addEventListener("click", () => {
 
   // IF mobile menu is open, prevent scrolling on body
   if (!mobile_nav.classList.contains("hidden")) {
-    // body.classList.add("no-scroll");
+    body.classList.add("no-scroll");
   } else {
     // IF  mobile menu is NOT open, allow scrolling on body
     body.classList.remove("no-scroll");
