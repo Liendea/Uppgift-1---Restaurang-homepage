@@ -32,7 +32,10 @@ function createMenuItem(item) {
 }
 
 // Step 3: Fetch and loop through meny
-fetch("../Json/menu.json")
+// fetch("../json/menu.json")
+fetch(
+  "https://raw.githubusercontent.com/Liendea/Uppgift-1---Restaurang-homepage/main/Json/menu.json"
+)
   .then((response) => response.json())
   .then((menu) => {
     // Loop thorugh every menu group
