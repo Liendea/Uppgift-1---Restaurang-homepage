@@ -88,6 +88,18 @@ filter_buttons.forEach((button) => {
 
 /////////////////////////////////////////////////////////////////////
 
+// rmeove hover ffekt på gfilter knappar
+
+function removeHover() {
+  if (window.innerWidth < 450) {
+    filter_buttons.forEach((button) => {
+      button.classList.remove("filter-hover");
+    });
+  }
+}
+removeHover();
+/////////////////////////////////////////////////////////////////////
+
 // Lunch buffet read more toggle
 const read_more = document.querySelector(".read-more");
 const more_info = document.querySelector(".more-info");
