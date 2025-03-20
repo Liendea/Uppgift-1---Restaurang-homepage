@@ -24,7 +24,7 @@ hamburger_button.addEventListener("click", () => {
     // body.classList.add("no-scroll");
   } else {
     // IF  mobile menu is NOT open, allow scrolling on body
-    //  body.classList.remove("no-scroll");
+    body.classList.remove("no-scroll");
   }
 });
 
