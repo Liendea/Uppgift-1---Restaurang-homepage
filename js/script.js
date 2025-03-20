@@ -51,6 +51,8 @@ fetch(
     });
   });
 
+/////////////////////////////////////////////////////////////////////
+
 // Menu filter buttons
 const filter_buttons = document.querySelectorAll(".filter-button");
 
@@ -82,6 +84,8 @@ filter_buttons.forEach((button) => {
     }
   });
 });
+
+/////////////////////////////////////////////////////////////////////
 
 // Lunch buffet read more toggle
 const read_more = document.querySelector(".read-more");
