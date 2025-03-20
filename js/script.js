@@ -32,7 +32,7 @@ function createMenuItem(item) {
 }
 
 // Step 3: Fetch and loop through meny
-fetch("menu.json")
+fetch("../Json/menu.json")
   .then((response) => response.json())
   .then((menu) => {
     // Loop thorugh every menu group
