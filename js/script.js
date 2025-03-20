@@ -88,7 +88,7 @@ filter_buttons.forEach((button) => {
 
 /////////////////////////////////////////////////////////////////////
 
-// rmeove hover ffekt på gfilter knappar
+// remove hover effekt på filter knappar
 
 function removeHover() {
   if (window.innerWidth < 450) {
