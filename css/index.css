@@ -5,7 +5,9 @@
 }
 
 /* no scroll when mobile meny is open */
-body .no-scroll {
+body {
+}
+.no-scroll {
   overflow: hidden;
   height: 100%;
 }

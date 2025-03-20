@@ -20,23 +20,22 @@ hamburger_button.addEventListener("click", () => {
 
   // IF mobile menu is open, prevent scrolling on body
   if (!mobile_nav.classList.contains("hidden")) {
-    body.style.overflow = "hidden";
+    body.classList.add("no-scroll");
   } else {
     // IF  mobile menu is NOT open, allow scrolling on body
-    body.style.removeProperty("overflow");
+    body.classList.remove("no-scroll");
   }
 });
 
 ///////////////////////////////////////////////////////////
 
 // Close mobile meny if window is resized
-
 window.addEventListener("resize", () => {
-  // IF mobile meny is open and window vecomes than 1000 px then HIDE mobile meny and hamburger button
+  // IF mobile meny is open and window becomes larger than 1000px then HIDE mobile meny and hamburger button
   if (!mobile_nav.classList.contains("hidden") && window.innerWidth > 1000) {
     mobile_nav.classList.add("hidden");
     hamburger_button.classList.add("hidden");
-    body.style.overflow = ""; //  Enable scroll on body again
+    body.classList.remove("no-scroll"); //Enable scroll on body again
 
     // OR if mobile menu is hidden and window is rezied to less than 1000 px
     // then show hamburger button and reset hamburger button lines
@@ -53,8 +52,7 @@ window.addEventListener("resize", () => {
 
 ///////////////////////////////////////////////////////////
 
-// Close mobile menu when mobile nav links are clicked
-
+// Close mobile menu when mobile nav links are clicked and reset hamburger button lines
 const mobile_nav_links = document.querySelectorAll(".mobile-nav-links");
 
 mobile_nav_links.forEach((link) => {
