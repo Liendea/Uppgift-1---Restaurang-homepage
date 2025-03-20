@@ -32,10 +32,10 @@ function createMenuItem(item) {
 }
 
 // Step 3: Fetch and loop through meny
-// fetch("../json/menu.json")
 fetch(
   "https://raw.githubusercontent.com/Liendea/Uppgift-1---Restaurang-homepage/main/Json/menu.json"
-)
+) // fetching from RAW data filepath from github instead of realtive filepath
+  // because of github coould not load JSON file when JSON file is placed in a separate folder in the repo
   .then((response) => response.json())
   .then((menu) => {
     // Loop thorugh every menu group
