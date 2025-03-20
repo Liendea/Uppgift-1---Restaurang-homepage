@@ -14,6 +14,7 @@ hamburger_button.addEventListener("click", () => {
   hamburger_top.classList.toggle("clicked");
   hamburger_middle.classList.toggle("clicked");
   hamburger_bottom.classList.toggle("clicked");
+  body.classList.toggle("no-scroll");
 
   // Toggle mobile menu
   mobile_nav.classList.toggle("hidden");
@@ -57,7 +58,7 @@ const mobile_nav_links = document.querySelectorAll(".mobile-nav-links");
 
 mobile_nav_links.forEach((link) => {
   link.addEventListener("click", () => {
-    body.style.removeProperty("overflow");
+    body.classList.remove("no-scroll");
 
     mobile_nav.classList.add("hidden");
     hamburger_top.classList.toggle("clicked");
