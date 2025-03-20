@@ -22,7 +22,7 @@ hamburger_button.addEventListener("click", () => {
   if (!mobile_nav.classList.contains("hidden")) {
     body.style.overflow = "hidden";
   } else {
-    // IF not mobile menu is open, allow scrolling on body
+    // IF  mobile menu is NOT open, allow scrolling on body
     body.style.removeProperty("overflow");
   }
 });
@@ -32,11 +32,13 @@ hamburger_button.addEventListener("click", () => {
 // Close mobile meny if window is resized
 
 window.addEventListener("resize", () => {
-  // IF mobile meny is open and window is larget than 1000 px then HIDE mobile meny and hamburger button
+  // IF mobile meny is open and window vecomes than 1000 px then HIDE mobile meny and hamburger button
   if (!mobile_nav.classList.contains("hidden") && window.innerWidth > 1000) {
     mobile_nav.classList.add("hidden");
     hamburger_button.classList.add("hidden");
-    // OR if mobile meny is hidden and window is rezied to less than 1000 px
+    body.style.overflow = ""; //  Enable scroll on body again
+
+    // OR if mobile menu is hidden and window is rezied to less than 1000 px
     // then show hamburger button and reset hamburger button lines
   } else if (
     mobile_nav.classList.contains("hidden") &&
@@ -81,20 +83,25 @@ window.addEventListener("scroll", () => {
   const currentScroll = window.pageYOffset;
 
   // IF current scroll is 0 (top of the page) remove classList "scroll-up"
-  if (currentScroll <= 0) {
-    nav.classList.remove("scroll-up");
-  }
-  // IF scrolling DOWN and the nav doesn't already have "scroll-down"
-  // Hide the nav by adding "scroll-down" and removing "scroll-up"
-  if (currentScroll > lastScroll && !nav.classList.contains("scroll-down")) {
-    nav.classList.remove("scroll-up");
-    nav.classList.add("scroll-down");
-  }
-  // IF scrolling UP and the nav currently has "scroll-down"
-  // Show the nav by adding "scroll-up" and removing "scroll-down"
-  if (currentScroll < lastScroll && nav.classList.contains("scroll-down")) {
+
+  if (currentScroll < 800) {
     nav.classList.remove("scroll-down");
-    nav.classList.add("scroll-up");
+    nav.classList.remove("scroll-up");
+    nav.style.position = "";
+  } else {
+    // IF scrolling DOWN and the nav doesn't already have "scroll-down"
+    // Hide the nav by adding "scroll-down" and removing "scroll-up"
+    if (currentScroll > lastScroll && !nav.classList.contains("scroll-down")) {
+      nav.classList.remove("scroll-up");
+      nav.classList.add("scroll-down");
+      nav.style.position = "fixed";
+    }
+    // IF scrolling UP and the nav currently has "scroll-down"
+    // Show the nav by adding "scroll-up" and removing "scroll-down"
+    if (currentScroll < lastScroll && nav.classList.contains("scroll-down")) {
+      nav.classList.remove("scroll-down");
+      nav.classList.add("scroll-up");
+    }
   }
 
   // Update the last scroll position for the next scroll event
