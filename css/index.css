@@ -377,8 +377,7 @@ header h3 {
   justify-content: space-between;
 }
 
-/* Read more accordion */
-
+/* Read more drop-down */
 .more-info h4 {
   margin-top: 2rem;
 }
@@ -575,7 +574,7 @@ textarea:focus {
 .img-container {
   width: 45%;
   margin-top: 8rem;
-  background-image: url(../images/contact.png);
+  background-image: url(../images/contact.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
