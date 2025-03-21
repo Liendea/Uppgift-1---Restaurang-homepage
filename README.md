@@ -8,24 +8,27 @@ This is a responsive website built with HTML, CSS and Javascript.
 
 ## Structure
 
-Html
 - `index.html`: Main page for the webpage
+- `README.md` : Readme file
+
+> SRC
+> Html
 - `booking.html`: Booking page
 - `confirmation.html`: Confirmation page
 
-Css
+> Css
 - `css/index.css`: Styles for the index.html
 - `css/global.css`: Globas style such as text styles
 - `css/buttons.css`: Style for buttons
 - `css/booking.css`: Styles for booking.html
 - `css/confirmation.css`: Styles for confirmation.html
 
-JS
+> JS
 - `js/script.js`: JavaScript for functionality for the index page
 - `js/navigation.js`: JavaScript for functionality for the navigation on all html pages
 - `js/booking.js`: JavaScript for functionality for the booking page
 
-JSON
+> JSON
 - `Json/menu.jason`: JSON file storing the menu items
 
 -----------------------------------------------------------------------
