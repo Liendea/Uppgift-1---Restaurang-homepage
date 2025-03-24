@@ -7,16 +7,16 @@ const lunch = document.querySelector(".lunch-container");
 
 // Input fields
 const dateInput = document.getElementById("date-input");
-
 const select_dinner_saturdays = document.getElementById("dinner-saturday");
 const select_dinner_weekdays = document.getElementById("dinner-weekdays");
 const select_lunch = document.getElementById("lunch-time");
 
 // -----------------------------------------------------------
-// 1. Disable dates that has allready passed
-// 2. När användaren väljer dag Mån - Fredag. Visa tider för lunch och middag på veckodagar
-// 3. När användaren väljer lördag. Visa middagstider för lördag
-// 4. Kontorllea vad klockan är när användaren gär valet, har tiden passerat? visa endast tillgängliga tider.
+// 1. Disable dates that has already passed
+// 2. When user choses Mon -Fri. Show available time slots for lunch and dinner.
+// 3. When user choses Saturday.Show available time slots for dinner.
+// 4. Check time when user chooses date. Only show available times based on current time.
+// 5. Redirect user to confirmation page when form is submitted
 // -----------------------------------------------------------
 
 // 1. Disable dates that has allready passed
@@ -24,12 +24,12 @@ dateInput.addEventListener("click", () => {
   const currentDate = getCurrentDate();
   diasblePassedDays(currentDate);
 
-  // 2. Ta reda på vilken dag som är valt och visa rätt tidsval beroende på dag
+  // 2. Find out wich day is choosen and show right time table depending on day.
   dateInput.addEventListener("change", () => {
     const selectedDate = dateInput.value;
     const dayOfWeek = getWeekDay(selectedDate);
 
-    // Återställ visning och inaktiverade alternativ
+    // Reset time tables
     dinner_weekday.classList.add("hidden");
     lunch.classList.add("hidden");
     dinner_saturday.classList.add("hidden");
@@ -44,61 +44,71 @@ dateInput.addEventListener("click", () => {
     if (dayOfWeek >= 1 && dayOfWeek <= 5) {
       console.log("Monday - Friday");
 
-      // Visa dölj tider beroende på dag
+      // Show / hide times depending on what day it is
       dinner_weekday.classList.remove("hidden");
       lunch.classList.remove("hidden");
       dinner_saturday.classList.add("hidden");
 
-      // Inaktivera passerade tider
+      // Inactivate times that has already passed
       disableTimes(select_lunch, selectedDate);
       disableTimes(select_dinner_weekdays, selectedDate);
     }
     if (dayOfWeek === 6) {
       console.log("Saturday");
 
-      // Visa dölj tider beroende på dag
+      // Show / hide times depending on what day it is
       dinner_saturday.classList.remove("hidden");
       dinner_weekday.classList.add("hidden");
       lunch.classList.add("hidden");
 
-      // Inaktivera passerade tider
+      // Inactivate times that has already passed
       disableTimes(select_dinner_saturdays, selectedDate);
     }
   });
 });
 
+// 5. Redirect user to confirmation page when form is submitted
+const reservationForm = document
+  .getElementById("reservationForm")
+  .addEventListener("submit", function (e) {
+    e.preventDefault(); // Prevets form to be sent in usual way
+
+    // Redirects to confirmation page
+    window.location.href = "confirmation.html";
+  });
+
 // -----------------------------------------------------------
 
 // FUNKTIONER
 
-// Funktion för att hämta veckodagar
+// Function tp get week days
 function getWeekDay(choosen_date) {
   const selectedDate = new Date(choosen_date);
   const dayOfWeek = selectedDate.getDay();
   return dayOfWeek;
 }
 
-// funktion för att hämta current date i format YYYY-MM-DD
+// Function to get current date
 function getCurrentDate() {
   const currentDate = new Date();
 
-  // Hämta dagens datum i formatet YYYY-MM-DD
+  // Get current date
   const year = currentDate.getFullYear();
   const month = (currentDate.getMonth() + 1).toString().padStart(2, "0"); // Månader är 0-indexerade (0-11)
   const day = currentDate.getDate().toString().padStart(2, "0"); // Lägg till noll om dagen är ensiffrig
 
-  // Formatera dagens datum till "YYYY-MM-DD"
+  // Format current date to "YYYY-MM-DD"
   const formattedDate = `${year}-${month}-${day}`;
 
   return formattedDate;
 }
 
-// Funktion för att diasble passerade dagar
+// Function to disable passed dates
 function diasblePassedDays(formattedDate) {
   dateInput.setAttribute("min", formattedDate);
 }
 
-// funktion för att kontrollera nuvarande tid i format HH:mm
+// Function to get current time (format HH:mm)
 function getCurrentTime() {
   const currentTime = new Date();
   const hours = currentTime.getHours();
@@ -111,7 +121,7 @@ function getCurrentTime() {
   return formattedTime;
 }
 
-// Funktion för att disable tider som redan passerat
+// Function to disable passed time slots
 function disableTimes(element, selectedDate) {
   // Options
   const options = Array.from(element.getElementsByTagName("option"));
@@ -121,12 +131,12 @@ function disableTimes(element, selectedDate) {
   options.forEach((option) => {
     const optionTime = option.innerText.trim();
 
-    // Om det valda datumet är i framtiden, gör alla alternativ tillgängliga
+    // IF the chosen dates is is the future -> make all options available
     if (selectedDate > currentDate) {
       option.disabled = false;
       option.style.color = "green";
     }
-    // Om det valda datumet är dagens datum && klockan är mer än optionet så ska option vara disable
+    // IF the chosen date is the current date &&  current time is more than the option -> disable option
     else if (selectedDate === currentDate && currentTime > optionTime) {
       option.disabled = true;
       option.style.removeProperty("color");
@@ -138,8 +148,7 @@ function disableTimes(element, selectedDate) {
   });
 }
 
-// funktion för att refresha datum input när sidan laddas
-
+// Function to refresh date input when page is loaded
 function refreshDateInput() {
   dateInput.value = "";
 }
